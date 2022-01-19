@@ -1,0 +1,30 @@
+{
+    "model" : {
+        "architecture":         "MobileNet",                              
+        "input_size":           [224,320],
+        "anchors":              [14.634666666666664, 31.82320441988951, 24.715428201392264, 54.40214190093709, 41.240404040404044, 87.13318694631633, 64.96000000000001, 133.0806590983582, 98.93333333333334, 185.60000000000002],
+        "labels":               ["face_mask","face"],
+        "coord_scale" : 		1.0,
+        "class_scale" : 		1.0,
+        "object_scale" : 	5.0,
+        "no_object_scale" : 	1.0
+    },
+    "pretrained" : {
+        "full":   "mobilenet_7_5_224_tf_no_top.h5"
+    },
+    "train" : {
+        "actual_epoch":         200,
+        "train_image_folder":   "face_mask/train_images",
+        "train_annot_folder":   "face_mask/train_ann",
+        "train_times":          2,
+        "valid_image_folder":   "",
+        "valid_annot_folder":   "",
+        "valid_times":          1,
+        "batch_size":           16,
+        "learning_rate":        1e-4,
+        "saved_folder":   		"save",
+        "first_trainable_layer": "",
+        "jitter":			true,
+        "is_only_detect" : 		false
+    }
+}
